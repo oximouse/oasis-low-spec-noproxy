@@ -51,13 +51,13 @@ so if you want create multiple providers you need to put multiple proxy there.
 4. Setup to create accounts/login and get Tokens:
 
    ```bash
-   npm run setup
+   node setup.js
    ```
 
 5. Run The Script:
 
    ```bash
-   npm run start
+   node main.js
    ```
 ## ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 forked from Zlkcyber/oasis-bot
