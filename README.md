@@ -59,12 +59,6 @@ so if you want create multiple providers you need to put multiple proxy there.
    ```bash
    npm run start
    ```
-
-6. Additional feature auto refferal
-   ```bash
-   npm run autoreff
-   ```
-
 ## ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 forked from Zlkcyber/oasis-bot
 This project is licensed under the [MIT License](LICENSE).
