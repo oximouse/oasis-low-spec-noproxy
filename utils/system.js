@@ -9,20 +9,30 @@ export function generateRandomId(length = 26) {
 
 function generateRandomCpuInfo() {
     const cpuModels = [
-        "AMD Ryzen 5 5600G with Radeon Graphics",
-        "Intel Core i7-9700K",
-        "AMD Ryzen 7 5800X",
-        "Intel Core i9-10900K",
-        "Intel Core i5-11600K",
-        "AMD Ryzen 9 5900X",
-        "Intel Core i7-12700K",
-        "AMD Ryzen 5 3600X",
-        "Intel Core i9-11900K",
-        "AMD Ryzen 3 3200G"
+        "Intel i3-2100",
+        "Intel i5-3450",
+        "Intel i3-4130",
+        "Intel i5-4440",
+        "Intel i5-4460",
+        "Intel i5-4460T",
+        "Intel i5-4590",
+        "Intel i5-4690",
+        "Intel i3-6100",
+        "Intel i5-6400",
+        "Intel i5-6400T",
+        "Intel i5-6500",
+        "Intel i5-6600",
+        "Intel i3-7100",
+        "Intel i5-7400",
+        "Intel i5-7400T",
+        "Intel i5-7600K",
+        "Intel i3-8100",
+        "Intel i3-9100F",
+        "Intel i5-9400F"
     ];
 
     const features = ["mmx", "sse", "sse2", "sse3", "ssse3", "sse4_1", "sse4_2", "avx"];
-    const numOfProcessors = [4, 8, 16, 32][Math.floor(Math.random() * 4)];
+    const numOfProcessors = [2, 4, 8, 16, 32][Math.floor(Math.random() * 4)];
 
     let processors = [];
     for (let i = 0; i < numOfProcessors; i++) {
@@ -48,11 +58,10 @@ function generateRandomCpuInfo() {
 
 function generateRandomGpuInfo() {
     const renderers = [
-        "ANGLE (AMD, AMD Radeon(TM) Graphics (0x00001638) Direct3D11 vs_5_0 ps_5_0, D3D11)",
-        "ANGLE (NVIDIA, GeForce GTX 1080 Ti Direct3D11 vs_5_0 ps_5_0, D3D11)",
-        "ANGLE (Intel, Iris Xe Graphics (0x00008086) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+        "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver-5.0.0)",
+
     ];
-    const vendors = ["Google Inc. (AMD)", "NVIDIA", "Intel"];
+    const vendors = ["Google"];
     return {
         renderer: renderers[Math.floor(Math.random() * renderers.length)],
         vendor: vendors[Math.floor(Math.random() * vendors.length)]
@@ -60,7 +69,7 @@ function generateRandomGpuInfo() {
 }
 
 function generateRandomOperatingSystem() {
-    const osList = ["windows", "linux", "macOS"];
+    const osList = ["windows"];
     return osList[Math.floor(Math.random() * osList.length)];
 }
 
