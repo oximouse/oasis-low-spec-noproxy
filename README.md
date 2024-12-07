@@ -32,8 +32,8 @@ so if you want create multiple providers you need to put multiple proxy there.
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/iamspa/oasis-bot-low-spec.git
-   cd oasis-bot-low-spec
+   git clone https://github.com/iamspa/oasis-low-spec-noproxy.git
+   cd oasis-low-spec-noproxy
    ```
 
 2. Install dependencies:
