@@ -10,7 +10,7 @@ async function connectWithToken(token) {
         "0": {
             "json": {
                 "name": randomId,
-                "platform": "headless"
+                "platform": "browser"
             }
         }
     };
