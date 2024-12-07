@@ -66,7 +66,7 @@ export async function createConnection(token) {
         setTimeout(() => {
             logger("Attempting to reconnect for token:", token, "warn");
             createConnection(token); 
-        }, 1000);
+        }, 5000);
     });
 
     socket.on("error", (error) => {
