@@ -1,9 +1,13 @@
-export function generateRandomId(length = 26) {
-    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-    let id = '';
-    for (let i = 0; i < length; i++) {
-        id += characters.charAt(Math.floor(Math.random() * characters.length));
-    }
+let counter = 1; // Variabel untuk melacak urutan ID
+
+export function generateRandomId() {
+    const prefix = 'NODE-';
+    // Menghasilkan ID dengan nomor berurutan dan memastikan dua digit
+    const id = prefix + counter.toString().padStart(2, '0');
+    
+    // Meningkatkan counter untuk ID berikutnya
+    counter++;
+    
     return id;
 }
 
