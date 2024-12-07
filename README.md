@@ -53,6 +53,6 @@ AI inference powered by distributed compute
    ```
 ## ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-forked from Zlkcyber/oasis-bot
+forked from [Zlkcyber/oasis-bot](https://github.com/Zlkcyber/oasis-bot)
 
 This project is licensed under the [MIT License](LICENSE).
