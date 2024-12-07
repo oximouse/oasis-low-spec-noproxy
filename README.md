@@ -48,25 +48,19 @@ so if you want create multiple providers you need to put multiple proxy there.
    nano accounts.txt
    ```
 
-4. put your proxy to `proxy.txt`
-
-   ```bash
-   nano proxy.txt
-   ```
-
-5. Setup to create accounts/login and get Tokens:
+4. Setup to create accounts/login and get Tokens:
 
    ```bash
    npm run setup
    ```
 
-6. Run The Script:
+5. Run The Script:
 
    ```bash
    npm run start
    ```
 
-7. Additional feature auto refferal
+6. Additional feature auto refferal
    ```bash
    npm run autoreff
    ```
