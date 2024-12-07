@@ -60,5 +60,7 @@ so if you want create multiple providers you need to put multiple proxy there.
    node main.js
    ```
 ## ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
 forked from Zlkcyber/oasis-bot
+
 This project is licensed under the [MIT License](LICENSE).
