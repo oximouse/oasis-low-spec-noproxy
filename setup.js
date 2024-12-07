@@ -28,7 +28,7 @@ async function setup() {
   }
 
   // Ask for the number of providers to create
-  const input = await askQuestion('Enter the number of PROVIDER you want to create [1-100]: ');
+  const input = await askQuestion('How Much PROVIDER You want to Create? MAX is 100: ');
   const numProv = parseInt(input, 10);
   
   if (isNaN(numProv) || numProv < 1 || numProv > 100) {
