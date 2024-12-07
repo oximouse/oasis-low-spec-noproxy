@@ -1,11 +1,17 @@
-import { generateRandomId } from "./system.js";
-import { readToken, saveToken } from "./file.js";
-import { logger } from "./logger.js";
-import axios from 'axios';
+import { generateRandomId } from "./system.js";  // For ID generation
+import { readToken, saveToken } from "./file.js"; // For handling tokens
+import { logger } from "./logger.js";             // For logging
+import axios from 'axios';                        // For API requests
 
-async function connectWithToken(token) {
+// Function to generate provider IDs using a prefix
+async function generateProviderId(prefix) {
+    return generateRandomId(prefix);  // Generate ID with the provided prefix
+}
+
+// Function to connect with the API using a token and return the created provider details
+async function connectWithToken(token, prefix) {
     const url = 'https://api.oasis.ai/internal/authConnect?batch=1';
-    const randomId = generateRandomId();
+    const randomId = await generateProviderId(prefix);  // Generate the ID with prefix
     const payload = {
         "0": {
             "json": {
@@ -17,7 +23,7 @@ async function connectWithToken(token) {
 
     const headers = {
         'Content-Type': 'application/json',
-        'Authorization': token,  
+        'Authorization': token,
     };
 
     try {
@@ -31,25 +37,34 @@ async function connectWithToken(token) {
     }
 }
 
-export async function createProviders(numID) {
+// Main function to create multiple providers using multiple tokens
+export async function createProviders(numID, prefix) {
     try {
+        // Read tokens from the file
         const tokens = await readToken('tokens.txt');
+        
         for (const token of tokens) { 
             logger(`Creating Providers using token: ${token}`);
+            // Loop through the number of providers to create
             for (let i = 0; i < numID; i++) {
-                logger(`Creating Providers #${i + 1}....`);
-                const logToken = await connectWithToken(token);
+                logger(`Creating Provider #${i + 1}...`);
+
+                // Connect with the token and generate the provider
+                const logToken = await connectWithToken(token, prefix);
+                
+                // If provider creation is successful, save the token
                 if (logToken) {
-                    saveToken("providers.txt", logToken)
+                    saveToken("providers.txt", logToken);  // Save the logToken to providers.txt
                 } else {
-                    logger('Failed to create provider', 'error', 'error');
+                    logger('Failed to create provider', 'error');
                     continue;
                 }
             };
-            
         };
+
         return true;
     } catch (error) {
         logger("Error reading token or connecting:", error, 'error');
-    };
-};
+        return false;
+    }
+}
