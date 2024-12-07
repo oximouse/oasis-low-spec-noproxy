@@ -16,15 +16,26 @@ function askQuestion(query) {
 
 async function setup() {
   showBanner();
-  // Ask for number of providers to create
-  const input = 100;
+  
+  // First, prompt the user for the prefix ID
+  const prefix = await askQuestion('Please Input Your PROVIDER Name: ');
+
+  // Validate prefix if necessary (Optional)
+  if (!prefix || prefix.length === 0) {
+    logger("Invalid prefix. Please provide a valid prefix.", "", "error");
+    rl.close();
+    return;
+  }
+
+  // Ask for the number of providers to create
+  const input = await askQuestion('Enter the number of PROVIDER you want to create [1-100]: ');
   const numProv = parseInt(input, 10);
   
   if (isNaN(numProv) || numProv < 1 || numProv > 100) {
     logger("Invalid input. Please enter a number between 1 and 100.", "", "error");
     rl.close();
     return;
-  };
+  }
 
   const isLogin = await loginFromFile('accounts.txt');
 
@@ -34,8 +45,8 @@ async function setup() {
     return; 
   }
 
-  logger(`Creating ${numProv} Providers...`);
-  await createProviders(numProv);
+  logger(`Creating ${numProv} Providers with prefix: ${prefix}...`);
+  await createProviders(numProv, prefix);  // Pass prefix to createProviders
   
   rl.close();
 }
