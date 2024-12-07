@@ -10,7 +10,7 @@ async function registerUser(email, password) {
         "json": {
             email: email,
             password: password, 
-            referralCode: "zlketh"
+            referralCode: "asikzima"
             }
         }
     };
