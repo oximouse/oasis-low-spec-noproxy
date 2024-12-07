@@ -1,13 +1,22 @@
-let counter = 1; // Variabel untuk melacak urutan ID
+let counter = 100;  // Start counter at 100
 
-export function generateRandomId() {
-    const prefix = 'NODE-';
-    // Menghasilkan ID dengan nomor berurutan dan memastikan dua digit
+// Function to generate the provider ID with a prefix
+export function generateRandomId(prefix) {
+    if (!prefix) {
+        return 'Prefix is missing';  // Return a fallback value if prefix is undefined
+    }
+
+    // Generate the ID using the provided prefix and ensure two-digit formatting for the counter
     const id = prefix + counter.toString().padStart(2, '0');
     
-    // Meningkatkan counter untuk ID berikutnya
-    counter++;
-    
+    // Decrease the counter for the next ID generation
+    counter--;
+
+    // Stop generating IDs if counter goes below 1
+    if (counter < 1) {
+        counter = 100; // Reset counter to 100 after reaching 01 (optional, remove if you don't need it)
+    }
+
     return id;
 }
 
