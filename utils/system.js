@@ -22,26 +22,8 @@ export function generateRandomId(prefix) {
 
 function generateRandomCpuInfo() {
     const cpuModels = [
-        "Intel i3-2100",
-        "Intel i5-3450",
-        "Intel i3-4130",
-        "Intel i5-4440",
-        "Intel i5-4460",
-        "Intel i5-4460T",
-        "Intel i5-4590",
-        "Intel i5-4690",
-        "Intel i3-6100",
-        "Intel i5-6400",
-        "Intel i5-6400T",
-        "Intel i5-6500",
-        "Intel i5-6600",
-        "Intel i3-7100",
-        "Intel i5-7400",
-        "Intel i5-7400T",
-        "Intel i5-7600K",
-        "Intel i3-8100",
-        "Intel i3-9100F",
-        "Intel i5-9400F"
+        "Intel i9-14900",
+        "Intel i7-14700"
     ];
 
     const features = ["mmx", "sse", "sse2", "sse3", "ssse3", "sse4_1", "sse4_2", "avx"];
