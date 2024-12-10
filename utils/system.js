@@ -53,10 +53,10 @@ function generateRandomCpuInfo() {
 
 function generateRandomGpuInfo() {
     const renderers = [
-        "ANGLE (NVIDIA, NVIDIA GeForce GTX 1050 (0x00001C81) Direct3D11 vs_5_0 ps_5_0, D3D11-32.0.15.5612)",
+        "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver-5.0.0)",
 
     ];
-    const vendors = ["NVIDIA"];
+    const vendors = ["Google"];
     return {
         renderer: renderers[Math.floor(Math.random() * renderers.length)],
         vendor: vendors[Math.floor(Math.random() * vendors.length)]
