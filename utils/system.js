@@ -22,43 +22,35 @@ export function generateRandomId(prefix) {
 
 function generateRandomCpuInfo() {
     const cpuModels = [
-        "Intel i5-14400",
-        "Intel i5-14400F",
-        "Intel i5-14400T",
-        "Intel i3-14100",
-        "Intel i3-14100F",
-        "Intel i3-14100T",
-        "Intel i5-13400",
-        "Intel i5-13400F",
-        "Intel i5-13400T",
-        "Intel i3-13100",
-        "Intel i3-13100F",
-        "Intel i3-13100T",
-        "Intel i5-12400",
-        "Intel i5-12400F",
-        "Intel i5-12400T",
-        "Intel i3-12100",
-        "Intel i3-12100F",
-        "Intel i3-12100T",
-        "Intel i5-11400",
-        "Intel i5-11400F",
-        "Intel i5-11400T",
-        "Intel i5-10400",
-        "Intel i5-10400F",
-        "Intel i5-10400T",
-        "Intel i3-10100",
-        "Intel i3-10100F",
-        "Intel i3-10100T",
-        "Intel i5-9400",
-        "Intel i5-9400F",
-        "Intel i5-9400T",
-        "Intel i3-9100",
-        "Intel i3-9100F",
-        "Intel i3-9100T"
+        "Intel i5-2300",
+        "Intel i5-2310",
+        "Intel i5-2320",
+        "Intel i5-2400",
+        "Intel i5-2500",
+        "Intel i5-3330",
+        "Intel i5-3340",
+        "Intel i5-3450",
+        "Intel i5-3470",
+        "Intel i5-3550",
+        "Intel i5-3570",
+        "Intel i5-4430",
+        "Intel i5-4440",
+        "Intel i5-4460",
+        "Intel i5-4470",
+        "Intel i5-4570",
+        "Intel i5-4590",
+        "Intel i5-4670",
+        "Intel i5-4690",
+        "Intel i5-6400",
+        "Intel i5-6500",
+        "Intel i5-6600",
+        "Intel i5-7400",
+        "Intel i5-7500",
+        "Intel i5-7600"
     ];
 
     const features = ["mmx", "sse", "sse2", "sse3", "ssse3", "sse4_1", "sse4_2", "avx"];
-    const numOfProcessors = [4, 8, 16, 32][Math.floor(Math.random() * 4)];
+    const numOfProcessors = [2, 4][Math.floor(Math.random() * 4)];
 
     let processors = [];
     for (let i = 0; i < numOfProcessors; i++) {
