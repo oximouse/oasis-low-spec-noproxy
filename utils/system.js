@@ -22,12 +22,43 @@ export function generateRandomId(prefix) {
 
 function generateRandomCpuInfo() {
     const cpuModels = [
-        "Intel i9-14900",
-        "Intel i7-14700"
+        "Intel i5-14400",
+        "Intel i5-14400F",
+        "Intel i5-14400T",
+        "Intel i3-14100",
+        "Intel i3-14100F",
+        "Intel i3-14100T",
+        "Intel i5-13400",
+        "Intel i5-13400F",
+        "Intel i5-13400T",
+        "Intel i3-13100",
+        "Intel i3-13100F",
+        "Intel i3-13100T",
+        "Intel i5-12400",
+        "Intel i5-12400F",
+        "Intel i5-12400T",
+        "Intel i3-12100",
+        "Intel i3-12100F",
+        "Intel i3-12100T",
+        "Intel i5-11400",
+        "Intel i5-11400F",
+        "Intel i5-11400T",
+        "Intel i5-10400",
+        "Intel i5-10400F",
+        "Intel i5-10400T",
+        "Intel i3-10100",
+        "Intel i3-10100F",
+        "Intel i3-10100T",
+        "Intel i5-9400",
+        "Intel i5-9400F",
+        "Intel i5-9400T",
+        "Intel i3-9100",
+        "Intel i3-9100F",
+        "Intel i3-9100T"
     ];
 
     const features = ["mmx", "sse", "sse2", "sse3", "ssse3", "sse4_1", "sse4_2", "avx"];
-    const numOfProcessors = [2, 4, 8, 16, 32][Math.floor(Math.random() * 4)];
+    const numOfProcessors = [4, 8, 16, 32][Math.floor(Math.random() * 4)];
 
     let processors = [];
     for (let i = 0; i < numOfProcessors; i++) {
