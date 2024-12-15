@@ -55,6 +55,6 @@ AI inference powered by distributed compute
 
 forked from [Zlkcyber/oasis-bot](https://github.com/Zlkcyber/oasis-bot)
 
-And from .[iamspa/oasis-low-spec-noproxy](https://github.com/iamspa/oasis-low-spec-noproxy)
+And from [iamspa/oasis-low-spec-noproxy](https://github.com/iamspa/oasis-low-spec-noproxy)
 
 This project is licensed under the [MIT License](LICENSE).
