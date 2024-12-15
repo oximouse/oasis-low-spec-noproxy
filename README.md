@@ -24,7 +24,7 @@ AI inference powered by distributed compute
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/iamspa/oasis-low-spec-noproxy.git
+   git clone https://github.com/oximouse/oasis-low-spec-noproxy.git
    cd oasis-low-spec-noproxy
    ```
 
